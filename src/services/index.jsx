@@ -34,7 +34,7 @@ const initGoogleClientAPI = (params, onUpdateSigninStatus, onInitFailure) => () 
 }
 
 const makeGoogleParams = (props) => {
-    const { clientId, cookiePolicy, hostedDomain, fetchBasicProfile, redirectUri, uxMode, scope } = props
+    const { clientId, cookiePolicy, hostedDomain, fetchBasicProfile, redirectUri, uxMode, scope, accessType } = props
 
     return ({
         client_id: clientId,
@@ -43,6 +43,7 @@ const makeGoogleParams = (props) => {
         fetch_basic_profile: fetchBasicProfile,
         ux_mode: uxMode,
         redirect_uri: redirectUri,
+        access_type: accessType,
         scope
     })
 }
